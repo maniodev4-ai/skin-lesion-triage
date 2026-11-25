@@ -1,0 +1,20 @@
+
+# environment and data (download data separately: Harvard Dataverse DOI 10.7910/DVN/DBW86T)
+.venv/
+data/
+
+# python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# large artifacts
+*.pt
+*.pth
+*.ckpt
+*.npy
+!models/final_model.*
+
+# OS / editor
+.DS_Store
+.vscode/

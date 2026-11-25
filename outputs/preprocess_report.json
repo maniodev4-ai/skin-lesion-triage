@@ -1,0 +1,71 @@
+{
+  "splits_hash_verified": true,
+  "age_median_train": 50.0,
+  "age_median_all_data_(not_used)": 50.0,
+  "categories_learned_from_train": {
+    "sex": [
+      "female",
+      "male",
+      "missing"
+    ],
+    "localization": [
+      "abdomen",
+      "acral",
+      "back",
+      "chest",
+      "ear",
+      "face",
+      "foot",
+      "genital",
+      "hand",
+      "lower extremity",
+      "missing",
+      "neck",
+      "scalp",
+      "trunk",
+      "upper extremity"
+    ]
+  },
+  "unseen_and_all_missing_rows_ok": true,
+  "masked_validation_shape_ok": true,
+  "feature_names": [
+    "num__age",
+    "num__missingindicator_age",
+    "cat__sex_female",
+    "cat__sex_male",
+    "cat__sex_missing",
+    "cat__localization_abdomen",
+    "cat__localization_acral",
+    "cat__localization_back",
+    "cat__localization_chest",
+    "cat__localization_ear",
+    "cat__localization_face",
+    "cat__localization_foot",
+    "cat__localization_genital",
+    "cat__localization_hand",
+    "cat__localization_lower extremity",
+    "cat__localization_missing",
+    "cat__localization_neck",
+    "cat__localization_scalp",
+    "cat__localization_trunk",
+    "cat__localization_upper extremity"
+  ],
+  "n_features": 20,
+  "missing_rate_pct": {
+    "train": {
+      "age": 0.59,
+      "sex": 0.62,
+      "localization": 2.33
+    },
+    "val": {
+      "age": 0.7,
+      "sex": 0.7,
+      "localization": 2.31
+    },
+    "test": {
+      "age": 0.35,
+      "sex": 0.21,
+      "localization": 2.38
+    }
+  }
+}
