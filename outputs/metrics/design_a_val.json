@@ -1,0 +1,73 @@
+{
+  "results": {
+    "A_embeddings_only": {
+      "accuracy": 0.7337526205450734,
+      "balanced_accuracy": 0.6116602450223286,
+      "macro_f1": 0.5778827509220676,
+      "macro_auc": 0.9120927669676693,
+      "referral_rate": 0.22990915443745633,
+      "referral_sensitivity": 0.6571428571428571,
+      "sens_at_30pct_referral": 0.75,
+      "per_class_recall": {
+        "akiec": 0.46808510638297873,
+        "bcc": 0.6351351351351351,
+        "bkl": 0.49044585987261147,
+        "df": 0.6875,
+        "mel": 0.4591194968553459,
+        "nv": 0.8413361169102297,
+        "vasc": 0.7
+      },
+      "cost_r2": 0.23549965059399022,
+      "cost_r5": 0.43675751222921033,
+      "cost_r10": 0.7721872816212438,
+      "cost_r20": 1.443046820405311,
+      "macro_f1_ci95": [
+        0.5107048543587255,
+        0.6289200931260366
+      ],
+      "referral_sensitivity_ci95": [
+        0.5798809783795589,
+        0.7203536184210525
+      ],
+      "chosen_C": 0.1
+    },
+    "A_embeddings_plus_metadata": {
+      "accuracy": 0.7540181691125087,
+      "balanced_accuracy": 0.6365410426559132,
+      "macro_f1": 0.6046101510838066,
+      "macro_auc": 0.9231951838698864,
+      "referral_rate": 0.22851153039832284,
+      "referral_sensitivity": 0.6785714285714286,
+      "sens_at_30pct_referral": 0.7857142857142857,
+      "per_class_recall": {
+        "akiec": 0.46808510638297873,
+        "bcc": 0.6351351351351351,
+        "bkl": 0.49044585987261147,
+        "df": 0.8125,
+        "mel": 0.48427672955974843,
+        "nv": 0.8653444676409185,
+        "vasc": 0.7
+      },
+      "cost_r2": 0.22152341020265548,
+      "cost_r5": 0.41020265548567436,
+      "cost_r10": 0.7246680642907058,
+      "cost_r20": 1.3535988819007687,
+      "macro_f1_ci95": [
+        0.5452605484112643,
+        0.6461334503441998
+      ],
+      "referral_sensitivity_ci95": [
+        0.6066163454321443,
+        0.7450506867233486
+      ],
+      "chosen_C": 0.1
+    }
+  },
+  "resources": {
+    "backbone": "EfficientNet-B0 (ImageNet weights, frozen)",
+    "parameters": 4007548,
+    "weights_size_mb_fp32": 16.0,
+    "cpu_forward_seconds_per_lesion": 0.0605,
+    "hardware_note": "fill in your CPU model and RAM for the report"
+  }
+}
