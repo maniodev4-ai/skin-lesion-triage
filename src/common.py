@@ -30,11 +30,19 @@ R_VALUES = (2, 5, 10, 20)  # cost ratios we test, since r is unknown (R2)
 
 
 # ------------------------------------------------------------------ data
+def splits_hash_ok(raw: bytes, locked: str) -> bool:
+    """True if the file content matches the locked hash. Git may convert Windows line
+    endings (CRLF) to Linux ones (LF), so the same data is accepted with either ending."""
+    lf = raw.replace(b"\r\n", b"\n")
+    crlf = lf.replace(b"\n", b"\r\n")
+    return any(hashlib.sha256(x).hexdigest() == locked for x in (raw, lf, crlf))
+
+
 def load_splits() -> pd.DataFrame:
     """Load the locked split; stop if it was changed (R6)."""
     csv_path = OUT / "splits.csv"
     locked = (OUT / "splits.sha256").read_text().strip()
-    assert hashlib.sha256(csv_path.read_bytes()).hexdigest() == locked, \
+    assert splits_hash_ok(csv_path.read_bytes(), locked), \
         "splits.csv changed since it was locked!"
     df = pd.read_csv(csv_path)
     index = {}

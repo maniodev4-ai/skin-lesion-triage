@@ -41,8 +41,11 @@ def load_splits() -> pd.DataFrame:
     """Load the locked split and verify it was not changed (R6)."""
     csv_path = OUT / "splits.csv"
     locked = (OUT / "splits.sha256").read_text().strip()
-    actual = hashlib.sha256(csv_path.read_bytes()).hexdigest()
-    assert actual == locked, "splits.csv changed since it was locked!"
+    raw = csv_path.read_bytes()
+    lf = raw.replace(b"\r\n", b"\n")
+    crlf = lf.replace(b"\n", b"\r\n")  # Git may convert Windows line endings; same data
+    assert any(hashlib.sha256(x).hexdigest() == locked for x in (raw, lf, crlf)), \
+        "splits.csv changed since it was locked!"
 
     df = pd.read_csv(csv_path)
     # rebuild image paths from data/ so no machine-specific paths are used

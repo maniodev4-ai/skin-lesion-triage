@@ -1,0 +1,67 @@
+{
+  "reps": 5,
+  "mean": {
+    "macro_f1": {
+      "correct": 0.5687,
+      "A: split by image": 0.6306,
+      "B: preprocessing on all data": 0.5704,
+      "C: wrong image-metadata match": 0.5513,
+      "reference: image only": 0.5566
+    },
+    "balanced_acc": {
+      "correct": 0.5794,
+      "A: split by image": 0.6523,
+      "B: preprocessing on all data": 0.5796,
+      "C: wrong image-metadata match": 0.5599,
+      "reference: image only": 0.5639
+    },
+    "macro_auc": {
+      "correct": 0.9223,
+      "A: split by image": 0.9342,
+      "B: preprocessing on all data": 0.9223,
+      "C: wrong image-metadata match": 0.9108,
+      "reference: image only": 0.9114
+    },
+    "sens_at_30pct_referral": {
+      "correct": 0.7514,
+      "A: split by image": 0.7908,
+      "B: preprocessing on all data": 0.7523,
+      "C: wrong image-metadata match": 0.7323,
+      "reference: image only": 0.7273
+    }
+  },
+  "delta_vs_correct": {
+    "macro_f1": {
+      "correct": 0.0,
+      "A: split by image": 0.0619,
+      "B: preprocessing on all data": 0.0016,
+      "C: wrong image-metadata match": -0.0174,
+      "reference: image only": -0.0122
+    },
+    "balanced_acc": {
+      "correct": 0.0,
+      "A: split by image": 0.0728,
+      "B: preprocessing on all data": 0.0001,
+      "C: wrong image-metadata match": -0.0195,
+      "reference: image only": -0.0156
+    },
+    "macro_auc": {
+      "correct": 0.0,
+      "A: split by image": 0.0119,
+      "B: preprocessing on all data": 0.0001,
+      "C: wrong image-metadata match": -0.0114,
+      "reference: image only": -0.0109
+    },
+    "sens_at_30pct_referral": {
+      "correct": 0.0,
+      "A: split by image": 0.0394,
+      "B: preprocessing on all data": 0.0008,
+      "C: wrong image-metadata match": -0.0192,
+      "reference: image only": -0.0242
+    }
+  },
+  "image_split_lesion_overlap_pct": 35.45,
+  "D_cost_honest": 0.51573646781032,
+  "D_cost_reported": 0.49193725727945586,
+  "pool": "train+val only; test locked"
+}
