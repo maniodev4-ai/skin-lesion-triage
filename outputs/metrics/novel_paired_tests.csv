@@ -1,0 +1,10 @@
+target,comparison,only_naive_missed,only_lesion_lcb_missed,sign_test_p,extra_referral_rate_pts,extra_referral_ci95,only_img_lcb_missed
+0.8,naive vs lesion_lcb,14.0,0.0,0.0001,4.87,"(4.05, 5.78)",
+0.8,naive vs img_lcb,12.0,,0.0005,3.42,"(3.09, 3.76)",0.0
+0.8,img_lcb vs lesion_lcb,,0.0,0.5,1.44,"(0.76, 2.18)",2.0
+0.85,naive vs lesion_lcb,12.0,0.0,0.0005,5.53,"(4.86, 6.22)",
+0.85,naive vs img_lcb,9.0,,0.0039,4.15,"(3.68, 4.64)",0.0
+0.85,img_lcb vs lesion_lcb,,0.0,0.25,1.38,"(0.89, 1.91)",3.0
+0.9,naive vs lesion_lcb,13.0,0.0,0.0002,7.01,"(5.88, 8.18)",
+0.9,naive vs img_lcb,11.0,,0.001,5.33,"(4.67, 6.0)",0.0
+0.9,img_lcb vs lesion_lcb,,0.0,0.5,1.68,"(0.77, 2.61)",2.0

@@ -1,0 +1,9 @@
+r,version,ece_hc,referral_rate,referral_sens,cost_per_lesion
+2,platt_calibrated,0.021,0.213,0.621,0.239
+2,raw,0.107,0.267,0.705,0.245
+5,platt_calibrated,0.021,0.377,0.832,0.378
+5,raw,0.107,0.324,0.778,0.389
+10,platt_calibrated,0.021,0.513,0.927,0.475
+10,raw,0.107,0.371,0.828,0.545
+20,platt_calibrated,0.021,0.646,0.971,0.568
+20,raw,0.107,0.42,0.866,0.773
