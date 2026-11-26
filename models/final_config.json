@@ -1,0 +1,48 @@
+{
+  "design": "A: frozen EfficientNet-B0 embeddings + metadata -> logistic regression",
+  "class_order": [
+    "akiec",
+    "bcc",
+    "bkl",
+    "df",
+    "mel",
+    "nv",
+    "vasc"
+  ],
+  "high_concern": [
+    "mel",
+    "bcc",
+    "akiec"
+  ],
+  "input_size": 224,
+  "imagenet_mean_std": [
+    [
+      0.485,
+      0.456,
+      0.406
+    ],
+    [
+      0.229,
+      0.224,
+      0.225
+    ]
+  ],
+  "metadata_preprocessor": "models/meta_preprocessor.joblib",
+  "logreg_C": 0.1,
+  "temperature": 2.086246572449089,
+  "operating_mode": "capacity-limited (R1: at most 30% of lesions sent to doctors)",
+  "referral_cap": 0.3,
+  "defer_budget": 0.025,
+  "referral_threshold_p_hc": 0.39361699233055353,
+  "defer_confidence_tau": 0.41919233499178016,
+  "decision": "REFER if P(HC)>=referral_threshold; else DEFER if max prob < tau; else NOT REFERRED",
+  "safety_mode": {
+    "threshold_p_hc": 0.1775709203100457,
+    "target_sensitivity": 0.85,
+    "delta": 0.1,
+    "rule": "lesion-level Clopper-Pearson lower bound (script 06)",
+    "note": "meets the target with confidence but needs about 44% referral"
+  },
+  "seed": 42,
+  "fitted_on": "train only; calibration and thresholds on validation only"
+}
