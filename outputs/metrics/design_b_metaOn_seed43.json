@@ -1,0 +1,144 @@
+{
+  "args": {
+    "seed": 43,
+    "epochs": 12,
+    "lr": 0.0003,
+    "batch": 64,
+    "use_meta": 1,
+    "meta_dropout": 0.2
+  },
+  "report": {
+    "accuracy": 0.8427672955974843,
+    "balanced_accuracy": 0.7633084119125283,
+    "macro_f1": 0.7605609516792501,
+    "macro_auc": 0.9669959034829583,
+    "referral_rate": 0.2082459818308875,
+    "referral_sensitivity": 0.7571428571428571,
+    "sens_at_30pct_referral": 0.8892857142857142,
+    "per_class_recall": {
+      "akiec": 0.7021276595744681,
+      "bcc": 0.8243243243243243,
+      "bkl": 0.6305732484076433,
+      "df": 0.625,
+      "mel": 0.6415094339622641,
+      "nv": 0.9196242171189979,
+      "vasc": 1.0
+    },
+    "cost_r2": 0.15513626834381553,
+    "cost_r5": 0.2976939203354298,
+    "cost_r10": 0.5352900069881202,
+    "cost_r20": 1.0104821802935011,
+    "macro_f1_ci95": [
+      0.7084313805742486,
+      0.8056607533243533
+    ],
+    "referral_sensitivity_ci95": [
+      0.6960253318689714,
+      0.8194197844007609
+    ],
+    "best_epoch": 11,
+    "parameters": 4018307,
+    "weights_size_mb_fp32": 16.1,
+    "training_seconds": 253.2,
+    "device": "cuda",
+    "gpu": "Tesla T4"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.6747355369834211,
+      "val_loss": 0.7688969969749451,
+      "val_macro_f1": 0.47277077028373476,
+      "val_balanced_acc": 0.45813851239023656,
+      "seconds": 22.6
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.8353579933041925,
+      "val_loss": 0.5558907389640808,
+      "val_macro_f1": 0.6443491368481499,
+      "val_balanced_acc": 0.7161799802095886,
+      "seconds": 19.1
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5647080852104737,
+      "val_loss": 0.564117431640625,
+      "val_macro_f1": 0.6634478760401938,
+      "val_balanced_acc": 0.7283235253472976,
+      "seconds": 19.5
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.4405952787345594,
+      "val_loss": 0.5755650997161865,
+      "val_macro_f1": 0.7064875940514258,
+      "val_balanced_acc": 0.7853947921319613,
+      "seconds": 20.5
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.3688628755442731,
+      "val_loss": 0.4629165232181549,
+      "val_macro_f1": 0.7295069175533262,
+      "val_balanced_acc": 0.7519186559619769,
+      "seconds": 22.7
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.2805547038311357,
+      "val_loss": 0.4735405147075653,
+      "val_macro_f1": 0.748832244224716,
+      "val_balanced_acc": 0.7654886937469331,
+      "seconds": 21.7
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.20846710085600345,
+      "val_loss": 0.4841180145740509,
+      "val_macro_f1": 0.7505442163474578,
+      "val_balanced_acc": 0.7606571079201864,
+      "seconds": 20.6
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.17493003200706062,
+      "val_loss": 0.49657997488975525,
+      "val_macro_f1": 0.7487783651878781,
+      "val_balanced_acc": 0.7573872857021129,
+      "seconds": 21.0
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.13997277364067667,
+      "val_loss": 0.5339931845664978,
+      "val_macro_f1": 0.7536301765793921,
+      "val_balanced_acc": 0.7520837176887156,
+      "seconds": 21.5
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.11592755896282626,
+      "val_loss": 0.5419988632202148,
+      "val_macro_f1": 0.745362415753562,
+      "val_balanced_acc": 0.7387973813801186,
+      "seconds": 21.3
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.09832455622250433,
+      "val_loss": 0.5284490585327148,
+      "val_macro_f1": 0.7605609516792501,
+      "val_balanced_acc": 0.7633084119125283,
+      "seconds": 21.0
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.10603089273177288,
+      "val_loss": 0.5338466167449951,
+      "val_macro_f1": 0.7531596729176099,
+      "val_balanced_acc": 0.7488186882875579,
+      "seconds": 21.4
+    }
+  ]
+}
