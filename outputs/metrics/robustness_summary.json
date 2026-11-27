@@ -1,0 +1,80 @@
+{
+  "missing_metadata_metadata_on_ensemble": [
+    {
+      "missing_rate": 0.0,
+      "macro_f1": 0.7696028820712834,
+      "macro_auc": 0.9745852404085682,
+      "sens_at_30pct_referral": 0.8821428571428571
+    },
+    {
+      "missing_rate": 0.25,
+      "macro_f1": 0.7713291216410783,
+      "macro_auc": 0.9744479388735897,
+      "sens_at_30pct_referral": 0.8809523809523809
+    },
+    {
+      "missing_rate": 0.5,
+      "macro_f1": 0.7722776239414086,
+      "macro_auc": 0.974201645609369,
+      "sens_at_30pct_referral": 0.8809523809523809
+    },
+    {
+      "missing_rate": 1.0,
+      "macro_f1": 0.7722693405518635,
+      "macro_auc": 0.9738830152166855,
+      "sens_at_30pct_referral": 0.8785714285714286
+    }
+  ],
+  "image_degradation_final_ensemble": [
+    {
+      "condition": "clean",
+      "macro_f1": 0.7856429484562532,
+      "macro_auc": 0.9741664123021755,
+      "sens_at_30pct_referral": 0.8857142857142857,
+      "locked_rule_referral_rate": 0.3004891684136967,
+      "locked_rule_referral_sensitivity": 0.8821428571428571,
+      "deferred_share": 0.02585604472396925,
+      "mean_confidence": 0.8683553338050842
+    },
+    {
+      "condition": "blur",
+      "macro_f1": 0.21684652026717385,
+      "macro_auc": 0.7181713998773768,
+      "sens_at_30pct_referral": 0.42142857142857143,
+      "locked_rule_referral_rate": 0.3172606568832984,
+      "locked_rule_referral_sensitivity": 0.42857142857142855,
+      "deferred_share": 0.19776380153738643,
+      "mean_confidence": 0.7432370781898499
+    },
+    {
+      "condition": "noise",
+      "macro_f1": 0.09122465455031761,
+      "macro_auc": 0.4995519366449929,
+      "sens_at_30pct_referral": 0.22142857142857142,
+      "locked_rule_referral_rate": 0.9426974143955276,
+      "locked_rule_referral_sensitivity": 0.9464285714285714,
+      "deferred_share": 0.18099231306778477,
+      "mean_confidence": 0.3034805655479431
+    },
+    {
+      "condition": "dark",
+      "macro_f1": 0.6652736024903747,
+      "macro_auc": 0.9463384103241025,
+      "sens_at_30pct_referral": 0.7928571428571428,
+      "locked_rule_referral_rate": 0.2606568832983927,
+      "locked_rule_referral_sensitivity": 0.6964285714285714,
+      "deferred_share": 0.07686932215234102,
+      "mean_confidence": 0.8361679911613464
+    },
+    {
+      "condition": "jpeg",
+      "macro_f1": 0.3193710013273794,
+      "macro_auc": 0.7211062663240337,
+      "sens_at_30pct_referral": 0.5964285714285714,
+      "locked_rule_referral_rate": 0.27393431167016075,
+      "locked_rule_referral_sensitivity": 0.575,
+      "deferred_share": 0.1146051712089448,
+      "mean_confidence": 0.8131568431854248
+    }
+  ]
+}
