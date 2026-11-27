@@ -1,0 +1,2 @@
+Test set evaluated once on 2026-11-27 17:07 with the locked model.
+Config temperature 1.3629, referral threshold 0.2384, tau 0.6603.

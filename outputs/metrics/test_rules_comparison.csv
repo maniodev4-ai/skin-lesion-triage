@@ -1,0 +1,5 @@
+,referral_rate,referral_sensitivity,cost_r1,cost_r2,cost_r5,cost_r10,cost_r20,cost_r50
+argmax_rule,0.2006,0.7384,0.1076,0.1586,0.3117,0.5667,1.0769,2.6073
+naive_threshold_target085,0.2648,0.8459,0.13,0.16,0.2502,0.4004,0.7009,1.6024
+safety_mode_risk_controlled_target085,0.2879,0.8638,0.1461,0.1726,0.2523,0.385,0.6506,1.4472
+LOCKED_rule_cap30_with_deferral,0.3012,0.8638,0.1593,0.1859,0.2655,0.3983,0.6639,1.4605

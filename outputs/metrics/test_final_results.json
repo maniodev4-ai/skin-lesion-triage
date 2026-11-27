@@ -1,0 +1,176 @@
+{
+  "headline": {
+    "accuracy": 0.8651292802236199,
+    "balanced_accuracy": 0.7197767858920673,
+    "macro_f1": 0.7483267284662138,
+    "macro_auc": 0.9679511776655095,
+    "ece_raw": 0.05112904828799349,
+    "ece_calibrated": 0.021892694827978804
+  },
+  "locked_rule": {
+    "referral_rate": 0.30118798043326345,
+    "referral_sensitivity": 0.8637992831541219,
+    "deferred_share": 0.023060796645702306,
+    "referred_share": 0.2781271837875611,
+    "sent_share_by_hc_class": {
+      "mel": 0.8113207547169812,
+      "bcc": 0.9594594594594594,
+      "akiec": 0.8913043478260869
+    },
+    "missed_high_concern": 38,
+    "high_concern_total": 279
+  },
+  "locked_rule_ci95": {
+    "referral_sensitivity": [
+      0.8127266221374045,
+      0.9147941888619855
+    ],
+    "referral_rate": [
+      0.2719285284011029,
+      0.33169913937365525
+    ],
+    "melanoma_sent_share": [
+      0.7292213397790055,
+      0.8847149122807016
+    ],
+    "macro_f1": [
+      0.6817389789617416,
+      0.8011335115175652
+    ]
+  },
+  "per_class": {
+    "akiec": {
+      "precision": 0.5535714285714286,
+      "recall": 0.6739130434782609,
+      "f1-score": 0.6078431372549019,
+      "support": 46.0
+    },
+    "bcc": {
+      "precision": 0.8181818181818182,
+      "recall": 0.8513513513513513,
+      "f1-score": 0.8344370860927153,
+      "support": 74.0
+    },
+    "bkl": {
+      "precision": 0.8,
+      "recall": 0.6878980891719745,
+      "f1-score": 0.7397260273972602,
+      "support": 157.0
+    },
+    "df": {
+      "precision": 1.0,
+      "recall": 0.47058823529411764,
+      "f1-score": 0.64,
+      "support": 17.0
+    },
+    "mel": {
+      "precision": 0.6168831168831169,
+      "recall": 0.5974842767295597,
+      "f1-score": 0.6070287539936102,
+      "support": 159.0
+    },
+    "nv": {
+      "precision": 0.931910569105691,
+      "recall": 0.9572025052192067,
+      "f1-score": 0.9443872296601442,
+      "support": 958.0
+    },
+    "vasc": {
+      "precision": 0.9411764705882353,
+      "recall": 0.8,
+      "f1-score": 0.8648648648648649,
+      "support": 20.0
+    }
+  },
+  "rules_on_test": {
+    "argmax_rule": {
+      "referral_rate": 0.20055904961565338,
+      "referral_sensitivity": 0.7383512544802867,
+      "cost_r1": 0.10761705101327743,
+      "cost_r2": 0.1586303284416492,
+      "cost_r5": 0.3116701607267645,
+      "cost_r10": 0.5667365478686234,
+      "cost_r20": 1.076869322152341,
+      "cost_r50": 2.607267645003494
+    },
+    "naive_threshold_target085": {
+      "referral_rate": 0.26484975541579314,
+      "referral_sensitivity": 0.8458781362007168,
+      "cost_r1": 0.129979035639413,
+      "cost_r2": 0.16002795248078266,
+      "cost_r5": 0.2501747030048917,
+      "cost_r10": 0.40041928721174,
+      "cost_r20": 0.7009084556254368,
+      "cost_r50": 1.602375960866527
+    },
+    "safety_mode_risk_controlled_target085": {
+      "referral_rate": 0.28791055206149546,
+      "referral_sensitivity": 0.8637992831541219,
+      "cost_r1": 0.14605171208944795,
+      "cost_r2": 0.17260656883298392,
+      "cost_r5": 0.2522711390635919,
+      "cost_r10": 0.38504542278127185,
+      "cost_r20": 0.6505939902166318,
+      "cost_r50": 1.4472396925227113
+    },
+    "LOCKED_rule_cap30_with_deferral": {
+      "referral_rate": 0.30118798043326345,
+      "referral_sensitivity": 0.8637992831541219,
+      "cost_r1": 0.15932914046121593,
+      "cost_r2": 0.18588399720475193,
+      "cost_r5": 0.2655485674353599,
+      "cost_r10": 0.39832285115303984,
+      "cost_r20": 0.6638714185883997,
+      "cost_r50": 1.4605171208944794
+    }
+  },
+  "top_mixups": [
+    [
+      "mel",
+      "nv",
+      48
+    ],
+    [
+      "nv",
+      "mel",
+      29
+    ],
+    [
+      "bkl",
+      "mel",
+      24
+    ],
+    [
+      "bkl",
+      "akiec",
+      12
+    ],
+    [
+      "bkl",
+      "nv",
+      11
+    ],
+    [
+      "mel",
+      "bkl",
+      8
+    ]
+  ],
+  "resources_R5": {
+    "ensemble_members": 3,
+    "parameters_total": 12054921,
+    "model_files_total_mb": 49.1,
+    "limit_mb": 100,
+    "cpu_seconds_per_lesion_mean": 0.17168862000883867,
+    "median": 0.16714745003264397,
+    "p95": 0.20837252514902502,
+    "max": 0.20995409996248782,
+    "limit_seconds": 1.0,
+    "hardware": {
+      "processor_string": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+      "platform": "Windows-11-10.0.22000-SP0",
+      "torch_threads": 2,
+      "note": "add CPU model and RAM manually"
+    }
+  }
+}
