@@ -13,7 +13,7 @@ __pycache__/
 *.pth
 *.ckpt
 *.npy
-!models/final_model.*
+!models/final_*
 
 # OS / editor
 .DS_Store

@@ -1,0 +1,179 @@
+{
+  "calibration": {
+    "temperature": 2.086246572449089,
+    "ece_raw": 0.1301920575136195,
+    "ece_calibrated_cross_fitted": 0.020682440148901346,
+    "nll_raw": 0.9430629218584922,
+    "nll_calibrated_cross_fitted": 0.7233141102398933,
+    "brier_raw": 0.3829593323341181,
+    "brier_calibrated_cross_fitted": 0.35349920692989867
+  },
+  "operating_points_val": {
+    "argmax_rule": {
+      "referral_rate": 0.22851153039832284,
+      "referral_sensitivity": 0.6785714285714286,
+      "cost_r2": 0.22152341020265548,
+      "cost_r5": 0.41020265548567436,
+      "cost_r10": 0.7246680642907058,
+      "cost_r20": 1.3535988819007687
+    },
+    "naive_threshold_target085": {
+      "referral_rate": 0.3466107617051013,
+      "referral_sensitivity": 0.85,
+      "cost_r2": 0.2389937106918239,
+      "cost_r5": 0.3270440251572327,
+      "cost_r10": 0.47379454926624737,
+      "cost_r20": 0.7672955974842768
+    },
+    "safety_mode_risk_controlled_target085": {
+      "referral_rate": 0.4381551362683438,
+      "referral_sensitivity": 0.8892857142857142,
+      "cost_r2": 0.3074772886093641,
+      "cost_r5": 0.3724668064290706,
+      "cost_r10": 0.4807826694619147,
+      "cost_r20": 0.6974143955276031
+    },
+    "locked_rule_cap30_with_deferral": {
+      "referral_rate": 0.3004891684136967,
+      "referral_sensitivity": 0.7857142857142857,
+      "cost_r2": 0.23060796645702306,
+      "cost_r5": 0.35639412997903563,
+      "cost_r10": 0.5660377358490566,
+      "cost_r20": 0.9853249475890985
+    }
+  },
+  "deferral": {
+    "defer_budget": 0.025,
+    "referral_threshold": 0.3936,
+    "tau": 0.4192,
+    "referred": 394,
+    "deferred": 36,
+    "total_referral_rate": 0.3005,
+    "referral_sensitivity": 0.7857,
+    "hc_caught_by_deferral": 10,
+    "errors_in_pool": 147,
+    "errors_avoided_by_deferral": 20,
+    "kept_error_rate": 0.1269,
+    "chosen_rule": "largest deferral budget with sensitivity loss <= 0.01 vs no deferral",
+    "sensitivity_without_deferral": 0.7893
+  },
+  "deferral_budget_table": [
+    {
+      "defer_budget": 0.0,
+      "referral_threshold": 0.3417,
+      "tau": 0.0,
+      "referred": 429,
+      "deferred": 0,
+      "total_referral_rate": 0.2998,
+      "referral_sensitivity": 0.7893,
+      "hc_caught_by_deferral": 0,
+      "errors_in_pool": 133,
+      "errors_avoided_by_deferral": 0,
+      "kept_error_rate": 0.1327
+    },
+    {
+      "defer_budget": 0.025,
+      "referral_threshold": 0.3936,
+      "tau": 0.4192,
+      "referred": 394,
+      "deferred": 36,
+      "total_referral_rate": 0.3005,
+      "referral_sensitivity": 0.7857,
+      "hc_caught_by_deferral": 10,
+      "errors_in_pool": 147,
+      "errors_avoided_by_deferral": 20,
+      "kept_error_rate": 0.1269
+    },
+    {
+      "defer_budget": 0.05,
+      "referral_threshold": 0.4528,
+      "tau": 0.4604,
+      "referred": 358,
+      "deferred": 72,
+      "total_referral_rate": 0.3005,
+      "referral_sensitivity": 0.7714,
+      "hc_caught_by_deferral": 15,
+      "errors_in_pool": 162,
+      "errors_avoided_by_deferral": 42,
+      "kept_error_rate": 0.1199
+    },
+    {
+      "defer_budget": 0.075,
+      "referral_threshold": 0.5064,
+      "tau": 0.4801,
+      "referred": 322,
+      "deferred": 107,
+      "total_referral_rate": 0.2998,
+      "referral_sensitivity": 0.7714,
+      "hc_caught_by_deferral": 27,
+      "errors_in_pool": 179,
+      "errors_avoided_by_deferral": 60,
+      "kept_error_rate": 0.1188
+    },
+    {
+      "defer_budget": 0.1,
+      "referral_threshold": 0.5652,
+      "tau": 0.4859,
+      "referred": 286,
+      "deferred": 143,
+      "total_referral_rate": 0.2998,
+      "referral_sensitivity": 0.7679,
+      "hc_caught_by_deferral": 43,
+      "errors_in_pool": 199,
+      "errors_avoided_by_deferral": 75,
+      "kept_error_rate": 0.1238
+    }
+  ],
+  "aurc": {
+    "all_lesions": 0.10325077910283935,
+    "not_referred_pool": 0.04659768080598714
+  },
+  "cost_vs_r_val": {
+    "argmax rule": {
+      "1": 0.1586303284416492,
+      "2": 0.22152341020265548,
+      "5": 0.41020265548567436,
+      "10": 0.7246680642907058,
+      "20": 1.3535988819007687,
+      "50": 3.2403913347309574
+    },
+    "naive threshold (target 0.85)": {
+      "1": 0.20964360587002095,
+      "2": 0.2389937106918239,
+      "5": 0.3270440251572327,
+      "10": 0.47379454926624737,
+      "20": 0.7672955974842768,
+      "50": 1.6477987421383649
+    },
+    "safety mode (risk-controlled 0.85)": {
+      "1": 0.28581411600279527,
+      "2": 0.3074772886093641,
+      "5": 0.3724668064290706,
+      "10": 0.4807826694619147,
+      "20": 0.6974143955276031,
+      "50": 1.347309573724668
+    },
+    "LOCKED rule (cap 30% + deferral)": {
+      "1": 0.18867924528301888,
+      "2": 0.23060796645702306,
+      "5": 0.35639412997903563,
+      "10": 0.5660377358490566,
+      "20": 0.9853249475890985,
+      "50": 2.243186582809224
+    },
+    "cost-optimal 1/(1+r), calibrated": {
+      "1": 0.13906359189378056,
+      "2": 0.21872816212438853,
+      "5": 0.33403214535290005,
+      "10": 0.46680642907058,
+      "20": 0.5359888190076869,
+      "50": 0.6429070580013976
+    }
+  },
+  "model_file_sizes_mb": {
+    "effb0_backbone.pt": 16.33,
+    "final_config.json": 0.0,
+    "final_model.joblib": 0.11,
+    "meta_preprocessor.joblib": 0.0
+  }
+}

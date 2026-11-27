@@ -1,5 +1,16 @@
 {
-  "design": "A: frozen EfficientNet-B0 embeddings + metadata -> logistic regression",
+  "design": "B: fine-tuned EfficientNet-B0 ensemble (3 seeds), without metadata",
+  "variant": "metaOff",
+  "members": [
+    "models/final_seed42.pt",
+    "models/final_seed43.pt",
+    "models/final_seed44.pt"
+  ],
+  "uses_metadata": false,
+  "architecture": "FusionNet in src/05_design_b_finetune.py (image-only variant feeds a zero metadata vector)",
+  "n_meta_features": 20,
+  "metadata_preprocessor": "models/meta_preprocessor.joblib",
+  "ensemble": "mean of member logits, divided by temperature, then softmax",
   "class_order": [
     "akiec",
     "bcc",
@@ -27,22 +38,20 @@
       0.225
     ]
   ],
-  "metadata_preprocessor": "models/meta_preprocessor.joblib",
-  "logreg_C": 0.1,
-  "temperature": 2.086246572449089,
+  "temperature": 1.362923160339029,
   "operating_mode": "capacity-limited (R1: at most 30% of lesions sent to doctors)",
   "referral_cap": 0.3,
   "defer_budget": 0.025,
-  "referral_threshold_p_hc": 0.39361699233055353,
-  "defer_confidence_tau": 0.41919233499178016,
+  "referral_threshold_p_hc": 0.23844100534915924,
+  "defer_confidence_tau": 0.6602994799613953,
   "decision": "REFER if P(HC)>=referral_threshold; else DEFER if max prob < tau; else NOT REFERRED",
   "safety_mode": {
-    "threshold_p_hc": 0.1775709203100457,
+    "threshold_p_hc": 0.21391521394252777,
     "target_sensitivity": 0.85,
     "delta": 0.1,
-    "rule": "lesion-level Clopper-Pearson lower bound (script 06)",
-    "note": "meets the target with confidence but needs about 44% referral"
+    "rule": "lesion-level Clopper-Pearson lower bound (script 06)"
   },
+  "selection_note": "variant chosen after seeing validation results; metadata gave no detectable gain",
   "seed": 42,
-  "fitted_on": "train only; calibration and thresholds on validation only"
+  "fitted_on": "train only; temperature, thresholds and deferral on validation only"
 }
