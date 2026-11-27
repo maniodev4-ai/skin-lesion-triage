@@ -1,0 +1,173 @@
+{
+  "top_mixups": [
+    [
+      "mel",
+      "nv",
+      48,
+      0.3018867924528302
+    ],
+    [
+      "nv",
+      "mel",
+      39,
+      0.0407098121085595
+    ],
+    [
+      "bkl",
+      "nv",
+      28,
+      0.17834394904458598
+    ],
+    [
+      "bkl",
+      "mel",
+      16,
+      0.10191082802547771
+    ],
+    [
+      "nv",
+      "bkl",
+      16,
+      0.016701461377870562
+    ],
+    [
+      "mel",
+      "bkl",
+      9,
+      0.05660377358490566
+    ],
+    [
+      "akiec",
+      "bkl",
+      8,
+      0.1702127659574468
+    ],
+    [
+      "bkl",
+      "akiec",
+      8,
+      0.050955414012738856
+    ]
+  ],
+  "missed_high_concern": 33,
+  "missed_breakdown": {
+    "mel -> nv": 24,
+    "mel -> bkl": 3,
+    "bcc -> df": 2,
+    "akiec -> bkl": 2,
+    "bcc -> bkl": 2
+  },
+  "sent_share_by_hc_class": {
+    "mel": 0.8301886792452831,
+    "bcc": 0.9459459459459459,
+    "akiec": 0.9574468085106383
+  },
+  "cases": [
+    {
+      "kind": "correct",
+      "image_id": "ISIC_0027102",
+      "true": "mel",
+      "pred": "mel",
+      "confidence": 0.9978312849998474
+    },
+    {
+      "kind": "correct",
+      "image_id": "ISIC_0027601",
+      "true": "bcc",
+      "pred": "bcc",
+      "confidence": 0.9981663823127747
+    },
+    {
+      "kind": "correct",
+      "image_id": "ISIC_0027307",
+      "true": "nv",
+      "pred": "nv",
+      "confidence": 0.9986990690231323
+    },
+    {
+      "kind": "wrong",
+      "image_id": "ISIC_0027620",
+      "true": "mel",
+      "pred": "nv",
+      "confidence": 0.9925740957260132
+    },
+    {
+      "kind": "wrong",
+      "image_id": "ISIC_0027640",
+      "true": "nv",
+      "pred": "mel",
+      "confidence": 0.9562477469444275
+    },
+    {
+      "kind": "wrong",
+      "image_id": "ISIC_0027118",
+      "true": "df",
+      "pred": "nv",
+      "confidence": 0.8643401861190796
+    }
+  ],
+  "frame_attention": {
+    "mean_attention_on_outer_frame": 0.06527277338257893,
+    "area_share_of_frame_if_uniform": 0.5024713010204082,
+    "n_images": 150
+  },
+  "shortcut_tests": [
+    {
+      "condition": "full image",
+      "accuracy": 0.8476589797344515,
+      "macro_f1": 0.7591858921448887
+    },
+    {
+      "condition": "central crop 60%",
+      "accuracy": 0.7763801537386443,
+      "macro_f1": 0.5857008521313481
+    },
+    {
+      "condition": "periphery only",
+      "accuracy": 0.4192872117400419,
+      "macro_f1": 0.1074057475813954
+    }
+  ],
+  "proxy_bins": {
+    "hair_amount": [
+      {
+        "bin": "low",
+        "n": 477,
+        "accuracy": 0.9266247379454927,
+        "hc_sent_share": 0.8
+      },
+      {
+        "bin": "mid",
+        "n": 477,
+        "accuracy": 0.8301886792452831,
+        "hc_sent_share": 0.8522727272727273
+      },
+      {
+        "bin": "high",
+        "n": 477,
+        "accuracy": 0.8113207547169812,
+        "hc_sent_share": 0.9171974522292994
+      }
+    ],
+    "corner_darkness": [
+      {
+        "bin": "low",
+        "n": 477,
+        "accuracy": 0.8721174004192872,
+        "hc_sent_share": 0.8088235294117647
+      },
+      {
+        "bin": "mid",
+        "n": 477,
+        "accuracy": 0.8972746331236897,
+        "hc_sent_share": 0.8809523809523809
+      },
+      {
+        "bin": "high",
+        "n": 477,
+        "accuracy": 0.7987421383647799,
+        "hc_sent_share": 0.921875
+      }
+    ]
+  }
+}
