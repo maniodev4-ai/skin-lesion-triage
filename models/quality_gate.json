@@ -1,0 +1,19 @@
+{
+  "thresholds": {
+    "sharpness_min": 10.123983335494994,
+    "noise_max": 1.9742361634465773,
+    "brightness_min": 119.99783134460449,
+    "brightness_max": 202.79808273315433
+  },
+  "description": "sharpness = variance of Laplacian of grey 224x224 image; noise = Immerkaer estimate; brightness = mean grey level. Thresholds = 1th/99th percentiles of clean validation images.",
+  "fit_on": "even-indexed half of the validation images",
+  "evaluated_on": "odd-indexed half (715 images)",
+  "false_flag_rate_clean": 0.07132867132867132,
+  "detection_rates": {
+    "blur": 1.0,
+    "noise": 1.0,
+    "dark": 0.986013986013986,
+    "bright": 0.8699300699300699,
+    "jpeg": 0.06153846153846154
+  }
+}

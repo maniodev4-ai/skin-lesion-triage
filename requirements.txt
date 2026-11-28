@@ -1,0 +1,11 @@
+# Core packages (unpinned for readability). For an exact record run:  pip freeze > requirements-freeze.txt
+numpy
+pandas
+scipy
+scikit-learn
+pillow
+matplotlib
+joblib
+torch
+torchvision
+streamlit
